@@ -1,15 +1,18 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-  Route,
-} from 'react-router-dom';
-const router = createBrowserRouter(
-  createRoutesFromElements(<Route path='/' element={<Root />}></Route>)
-);
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' />
+          <Route path='/cart' />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
