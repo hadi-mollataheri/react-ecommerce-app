@@ -1,5 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Cart from './pages/cart/Cart';
+import Landing from './pages/landing/Landing';
 
 function App() {
   return (
@@ -7,8 +9,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' />
-          <Route path='/cart' />
+          <Route path='/' element={<Landing />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </Router>
     </div>
