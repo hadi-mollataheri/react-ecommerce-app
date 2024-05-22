@@ -3,9 +3,16 @@ import React from 'react';
 function Product({ product }) {
   const { id, productImage, productName, price } = product;
   return (
-    <div key={id} className='mt-12'>
+    <div
+      key={id}
+      className='flex flex-col justify-center items-center'
+    >
       <div className='max-w-full'>
-      <img src={productImage} alt={productName} className=' w-4/5 h-auto mx-auto block object-contain shadow-md' />
+        <img
+          src={productImage}
+          alt={productName}
+          className=' w-4/5 h-auto mx-auto object-contain shadow-md overflow-hidden'
+        />
       </div>
       <div id='info' className='flex flex-col items-center justify-center mt-5'>
         <p className='mb-2 font-semibold'>{productName}</p>

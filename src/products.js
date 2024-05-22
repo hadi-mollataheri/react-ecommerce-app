@@ -16,7 +16,7 @@ export const PRODUCTS = [
   {
     id: 2,
     productImage: iPhone,
-    productName: 'iPhone',
+    productName: 'IPhone',
     price: '1000.0$',
   },
   {
