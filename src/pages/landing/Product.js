@@ -1,12 +1,13 @@
 import React from 'react';
 
-function Product({ product }) {
+function Product({ product, setCartProducts }) {
   const { id, productImage, productName, price } = product;
+  const handleAddToCartButton = () => {
+    setCartProducts((prevCartProducts) => [...prevCartProducts, product]);
+  };
+
   return (
-    <div
-      key={id}
-      className='flex flex-col justify-center items-center'
-    >
+    <div key={id} className='flex flex-col justify-center items-center'>
       <div className='max-w-full'>
         <img
           src={productImage}
@@ -17,7 +18,10 @@ function Product({ product }) {
       <div id='info' className='flex flex-col items-center justify-center mt-5'>
         <p className='mb-2 font-semibold'>{productName}</p>
         <p className='mb-3'>{price}</p>
-        <button className=' border-2 border-black rounded-3xl px-0.5 pt-0.5 pb-1 m-0 box-border text-xs'>{`Add To Cart(${'num'})`}</button>
+        <button
+          onClick={handleAddToCartButton}
+          className=' border-[1.5px] border-black rounded-3xl px-0.5 pt-0.5 pb-1 m-0 box-border text-xs hover:bg-black hover:text-white'
+        >{`Add To Cart(${''})`}</button>
       </div>
     </div>
   );
