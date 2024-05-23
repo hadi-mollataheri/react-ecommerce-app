@@ -1,10 +1,8 @@
 import React from 'react';
 
-function Product({ product, setCartProducts }) {
+function Product({ product }) {
   const { id, productImage, productName, price } = product;
-  const handleAddToCartButton = () => {
-    setCartProducts((prevCartProducts) => [...prevCartProducts, product]);
-  };
+  const handleAddToCartButton = () => {};
 
   return (
     <div key={id} className='flex flex-col justify-center items-center'>
