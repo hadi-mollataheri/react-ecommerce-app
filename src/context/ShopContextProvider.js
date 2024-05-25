@@ -1,13 +1,10 @@
 import React, { createContext, useState } from 'react';
 import { PRODUCTS } from '../products';
-
+// This context includes state and info for Clicking the Add To Cart button feature
 export const ShopContext = createContext();
 
 function ShopContextProvider(props) {
-  // Create a state named cartProducts with initial value
-  // of: An object with properties that count how many
-  // products exist in the cart with a specific id for
-  // every product that exist. like: {1: 0, 2: 0, ... }
+  // Get the default value of cartProducts state
   function getDefaultCart() {
     let defaultCart = {};
     for (let i = 1; i <= PRODUCTS.length; i++) {
@@ -21,9 +18,36 @@ function ShopContextProvider(props) {
     }
     return defaultCart;
   }
-
+  // Create a state named cartProducts
+  // This state represent the existent of each products in the cart
+  // based on their id property:
+  // initial value is: An object with properties that count how many
+  // products exist in the cart with a specific id for
+  // every product that exist. like: {1: 0, 2: 0, ... }
   const [cartProducts, setCartProducts] = useState(getDefaultCart());
-  console.log(cartProducts);
+
+  // Add product to cart: This function increment the old
+  // value of the product for the product id that it's add button
+  const addToCart = (id) => {
+    setCartProducts((prevCartProducts) => {
+      return {
+        ...prevCartProducts,
+        [id]: prevCartProducts[id] + 1,
+      };
+    });
+  };
+
+  // Remove product from cart: This function decrement
+  // from the stock value of the product id that has
+  // been added to it when the it's remove button has been clicked
+  const removeFromCart = (id) => {
+    setCartProducts((prevCartProducts) => {
+      return {
+        ...prevCartProducts,
+        [id]: prevCartProducts[id] > 0 ? prevCartProducts[id] - 1 : 0,
+      };
+    });
+  };
 
   return <ShopContext.Provider>{props.children}</ShopContext.Provider>;
 }
