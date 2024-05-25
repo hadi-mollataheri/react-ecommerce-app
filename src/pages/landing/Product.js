@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ShopContext } from '../../context/ShopContextProvider';
 
 function Product({ product }) {
+  const { cartProducts, addToCart } = useContext(ShopContext);
   const { id, productImage, productName, price } = product;
-  const handleAddToCartButton = () => {};
+
+  const productQuantity = cartProducts[id];
+
+  const handleAddToCartButton = () => addToCart(id);
 
   return (
     <div key={id} className='flex flex-col justify-center items-center'>
@@ -10,7 +15,7 @@ function Product({ product }) {
         <img
           src={productImage}
           alt={productName}
-          className=' w-4/5 h-auto mx-auto object-contain shadow-md overflow-hidden'
+          className=' w-4/5 h-auto mx-auto object-contain shadow-md overflow-hidden rounded'
         />
       </div>
       <div id='info' className='flex flex-col items-center justify-center mt-5'>
@@ -18,8 +23,10 @@ function Product({ product }) {
         <p className='mb-3'>{price}</p>
         <button
           onClick={handleAddToCartButton}
-          className=' border-[1.5px] border-black rounded-3xl px-0.5 pt-0.5 pb-1 m-0 box-border text-xs hover:bg-black hover:text-white'
-        >{`Add To Cart(${''})`}</button>
+          className=' border-[1.5px] border-black rounded-3xl px-1 pt-0.5 pb-1 m-0 box-border text-xs font-semibold hover:bg-black hover:text-white'
+        >
+          Add To Cart {productQuantity !== 0 ? `(${productQuantity})` : ''}
+        </button>
       </div>
     </div>
   );
