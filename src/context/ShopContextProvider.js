@@ -48,7 +48,7 @@ function ShopContextProvider(props) {
   // The ShopContext.Provider component is returned
   // This component wraps the children components and provides them the context
   return (
-    <ShopContext.Provider value={{ cartProducts, addToCart, removeFromCart }}>
+    <ShopContext.Provider value={ { cartProducts, addToCart, removeFromCart } }>
       {props.children}
     </ShopContext.Provider>
   );
