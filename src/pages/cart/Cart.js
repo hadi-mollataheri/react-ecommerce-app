@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { PRODUCTS } from '../../products';
 import CartProduct from './CartProduct';
+import { ShopContext } from '../../context/ShopContextProvider';
 
 function Cart() {
-  return (
-    <div>
-      {PRODUCTS.map((product) => (
-        <CartProduct key={product.id} product={product} />
-      ))}
-    </div>
+  const { emptyCartMessage } = useContext(ShopContext);
+
+
+
+  return !emptyCartMessage ? (
+    PRODUCTS.map((product) => (
+      <CartProduct key={product.id} product={product} />
+    ))
+  ) : (
+    <p className=' opacity-65 flex justify-center my-16'>{emptyCartMessage}</p>
   );
 }
 

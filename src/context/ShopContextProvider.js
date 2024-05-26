@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { PRODUCTS } from '../products';
 
 // Create a new context for the shop
@@ -19,6 +19,19 @@ function ShopContextProvider(props) {
   // The key is the product id and the value is the quantity
   // Initial state is set by getDefaultCart function
   const [cartProducts, setCartProducts] = useState(getDefaultCart());
+  const [emptyCartMessage, setEmptyCartMessage] = useState('');
+
+  useEffect(() => {
+    let counter = 0;
+    for (let prop in cartProducts) {
+      counter += cartProducts[prop];
+    }
+    counter === 0
+      ? setEmptyCartMessage('Your Cart Is Empty')
+      : setEmptyCartMessage('');
+  }, [cartProducts]);
+
+  console.log(emptyCartMessage);
 
   // Function to add a product to the cart
   // It takes the id of the product as a parameter
@@ -48,7 +61,9 @@ function ShopContextProvider(props) {
   // The ShopContext.Provider component is returned
   // This component wraps the children components and provides them the context
   return (
-    <ShopContext.Provider value={ { cartProducts, addToCart, removeFromCart } }>
+    <ShopContext.Provider
+      value={{ cartProducts, addToCart, removeFromCart, emptyCartMessage }}
+    >
       {props.children}
     </ShopContext.Provider>
   );
