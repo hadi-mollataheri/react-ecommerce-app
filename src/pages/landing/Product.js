@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { ShopContext } from '../../context/ShopContextProvider';
 
 function Product({ product }) {
-  const { cartProducts, addToCart } = useContext(ShopContext);
+  const { cartProductsState, addToCart } = useContext(ShopContext);
   const { id, productImage, productName, price } = product;
 
-  const productQuantity = cartProducts[id];
+  const productQuantity = cartProductsState[id];
 
   const handleAddToCartButton = () => addToCart(id);
 

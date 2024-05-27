@@ -18,26 +18,24 @@ function ShopContextProvider(props) {
   // State to track the quantity of each product in the cart
   // The key is the product id and the value is the quantity
   // Initial state is set by getDefaultCart function
-  const [cartProducts, setCartProducts] = useState(getDefaultCart());
+  const [cartProductsState, setCartProductsState] = useState(getDefaultCart());
   const [emptyCartMessage, setEmptyCartMessage] = useState('');
 
   useEffect(() => {
     let counter = 0;
-    for (let prop in cartProducts) {
-      counter += cartProducts[prop];
+    for (let prop in cartProductsState) {
+      counter += cartProductsState[prop];
     }
     counter === 0
       ? setEmptyCartMessage('Your Cart Is Empty')
       : setEmptyCartMessage('');
-  }, [cartProducts]);
-
-  console.log(emptyCartMessage);
+  }, [cartProductsState]);
 
   // Function to add a product to the cart
   // It takes the id of the product as a parameter
   // The function updates the state by incrementing the quantity of the product in the cart
   const addToCart = (id) => {
-    setCartProducts((prevCartProducts) => {
+    setCartProductsState((prevCartProducts) => {
       return {
         ...prevCartProducts,
         [id]: prevCartProducts[id] + 1,
@@ -50,7 +48,7 @@ function ShopContextProvider(props) {
   // The function updates the state by decrementing the quantity of the product in the cart
   // If the quantity is already 0, it remains 0
   const removeFromCart = (id) => {
-    setCartProducts((prevCartProducts) => {
+    setCartProductsState((prevCartProducts) => {
       return {
         ...prevCartProducts,
         [id]: prevCartProducts[id] > 0 ? prevCartProducts[id] - 1 : 0,
@@ -58,11 +56,27 @@ function ShopContextProvider(props) {
     });
   };
 
+  // Calculate subtotal of products
+  // const getSubtotal = (product) => {
+  //   let totalProductPrice = 1;
+  //   let subtotal = 0;
+  //   for (let id in cartProducts) {
+  //     totalProductPrice = product.price * cartProducts[id];
+  //     subtotal += totalProductPrice;
+  //   }
+  //   return subtotal;
+  // };
+
   // The ShopContext.Provider component is returned
   // This component wraps the children components and provides them the context
   return (
     <ShopContext.Provider
-      value={{ cartProducts, addToCart, removeFromCart, emptyCartMessage }}
+      value={{
+        cartProductsState,
+        addToCart,
+        removeFromCart,
+        emptyCartMessage,
+      }}
     >
       {props.children}
     </ShopContext.Provider>
