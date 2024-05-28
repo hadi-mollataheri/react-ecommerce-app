@@ -20,7 +20,7 @@ function Cart() {
       </p>
       <div id='cart-navLinks' className='flex justify-center mt-6'>
         <Link
-          to={'/'}
+          to={'/react-ecommerce-app'}
           className='mx-3 bg-slate-900 text-slate-200 rounded-md px-3 pb-1 pt-0.5 hover:bg-slate-950 hover:text-white transition'
         >
           Continue Shopping
