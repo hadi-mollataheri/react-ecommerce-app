@@ -1,6 +1,6 @@
 # Explanation
 
-This is a *E-commerce* web app that I built with **React.js**.
+This is a *E-commerce* web app whit focusing on *shopping cart* that I built with **React.js**.
 
 **Topics:** React state, useContext() api, React forms, react-router-dom and basic CSS styles
 
