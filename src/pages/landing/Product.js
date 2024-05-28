@@ -15,7 +15,7 @@ function Product({ product }) {
         <img
           src={productImage}
           alt={productName}
-          className=' w-4/5 h-auto mx-auto object-contain overflow-hidden sm:mx-0 sm:w-full sm:h-64 sm:rounded-none'
+          className=' w-4/5 h-60 shadow-sm rounded mx-auto object-contain overflow-hidden sm:mx-0 sm:w-full sm:h-64 sm:rounded-none'
         />
       </div>
       <div id='info' className='flex flex-col items-center justify-center mt-5'>
