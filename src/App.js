@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path='/react-ecommerce-app'
+            path='/'
             element={
               <ShopContextProvider>
                 <Landing />
