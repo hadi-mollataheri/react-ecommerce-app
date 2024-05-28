@@ -13,14 +13,14 @@ function CartProduct({ product }) {
   };
 
   return (
-    <div id='cart-product-container' className='mx-auto max-w-80 mb-16 text-lg'>
+    <div id='cart-product-container' className='mx-auto max-w-80 sm:max-w-md mb-16 text-lg'>
       <div
         id='cart-product'
-        className='flex justify-evenly items-center mt-16 mx-3 shadow-[0px_0px_9px_rgba(0,0,0,0.5)] rounded-xl'
+        className='flex justify-evenly sm:justify-center sm:w-full sm:pl-5 items-center mt-16 mx-3 shadow-[0px_0px_5px_rgba(0,0,0,0.4)] rounded-xl'
       >
         <div
           id='cart-image-container'
-          className=' max-w-40 h-40 overflow-hidden my-4'
+          className=' max-w-40 h-40 overflow-hidden my-4 sm:w-1/2 sm:mx-auto'
         >
           <img
             src={productImage}
@@ -28,7 +28,7 @@ function CartProduct({ product }) {
             className=' w-full h-full object-contain'
           />
         </div>
-        <div id='cart-info-container'>
+        <div id='cart-info-container' className='sm:w-1/2 sm:mx-auto sm:flex sm:flex-col sm:justify-center sm:items-center'>
           <p className='font-bold'>{productName}</p>
           <p className='font-semibold mt-3'>Price: {price}</p>
           <div
