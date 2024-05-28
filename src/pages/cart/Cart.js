@@ -16,7 +16,7 @@ function Cart() {
         } else return null;
       })}
       <p id='subtotal' className='flex justify-center font-bold'>
-        Subtotal: {subtotal}
+        Subtotal: {subtotal}$
       </p>
       <div id='cart-navLinks' className='flex justify-center mt-6'>
         <Link

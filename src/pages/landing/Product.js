@@ -10,12 +10,12 @@ function Product({ product }) {
   const handleAddToCartButton = () => addToCart(id);
 
   return (
-    <div key={id} className='flex flex-col justify-center items-center'>
-      <div className='max-w-full'>
+    <div key={id} className='sm:w-full'>
+      <div className='max-w-full sm:w-full sm:shadow-sm rounded'>
         <img
           src={productImage}
           alt={productName}
-          className=' w-4/5 h-auto mx-auto object-contain shadow-md overflow-hidden rounded'
+          className=' w-4/5 h-auto mx-auto object-contain overflow-hidden sm:mx-0 sm:w-full sm:h-64 sm:rounded-none'
         />
       </div>
       <div id='info' className='flex flex-col items-center justify-center mt-5'>
