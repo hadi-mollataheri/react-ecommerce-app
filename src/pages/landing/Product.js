@@ -23,7 +23,7 @@ function Product({ product }) {
         <p className='mb-3'>{price}</p>
         <button
           onClick={handleAddToCartButton}
-          className=' border-[1.5px] border-black rounded-3xl px-1 pt-0.5 pb-1 m-0 box-border text-xs font-semibold hover:bg-black hover:text-white transition'
+          className=' border-[1.5px] border-black rounded-3xl px-1 flex items-center justify-center py-1 leading-none  sm:pt-0.5 sm:pb-1 m-0 box-border text-xs font-semibold hover:bg-black hover:text-white transition'
         >
           Add To Cart {productQuantity !== 0 ? `(${productQuantity})` : ''}
         </button>
