@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-ecommerce-app/static/css/main.d29da6d1.css",
-    "main.js": "/react-ecommerce-app/static/js/main.4d9dba8a.js",
+    "main.css": "/react-ecommerce-app/static/css/main.52fb5e5a.css",
+    "main.js": "/react-ecommerce-app/static/js/main.bdc20c88.js",
     "static/media/keyboard.jpg": "/react-ecommerce-app/static/media/keyboard.962a01b1a3da4e9dfeee.jpg",
     "static/media/t-shirt.jpg": "/react-ecommerce-app/static/media/t-shirt.bd57a64e7e36c0a71deb.jpg",
     "static/media/sweater.jpg": "/react-ecommerce-app/static/media/sweater.9c00ce4a09e1d0109274.jpg",
@@ -10,11 +10,11 @@
     "static/media/camera.jpg": "/react-ecommerce-app/static/media/camera.3722eb180042c4074101.jpg",
     "static/media/laptop.jpg": "/react-ecommerce-app/static/media/laptop.633e0c792a2d28234d05.jpg",
     "index.html": "/react-ecommerce-app/index.html",
-    "main.d29da6d1.css.map": "/react-ecommerce-app/static/css/main.d29da6d1.css.map",
-    "main.4d9dba8a.js.map": "/react-ecommerce-app/static/js/main.4d9dba8a.js.map"
+    "main.52fb5e5a.css.map": "/react-ecommerce-app/static/css/main.52fb5e5a.css.map",
+    "main.bdc20c88.js.map": "/react-ecommerce-app/static/js/main.bdc20c88.js.map"
   },
   "entrypoints": [
-    "static/css/main.d29da6d1.css",
-    "static/js/main.4d9dba8a.js"
+    "static/css/main.52fb5e5a.css",
+    "static/js/main.bdc20c88.js"
   ]
 }
