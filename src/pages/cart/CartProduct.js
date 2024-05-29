@@ -38,20 +38,20 @@ function CartProduct({ product }) {
             <button
               id='delete'
               onClick={handleDeleteButton}
-              className='bg-black text-white sm:pb-1 align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
+              className='bg-black text-white sm:pb-1 px-2 py-2 mx-auto align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
             >
               -
             </button>
             <span
               id='cart-product-quantity'
-              className='text-sm bg-slate-600 text-white sm:pb-0.5 align-middle leading-none w-6 h-6 rounded-full flex justify-center items-center'
+              className='text-sm bg-slate-600 text-white sm:pb-0.5 mx-auto align-middle leading-none w-6 h-6 rounded-full flex justify-center items-center'
             >
               {cartProductsState[id]}
             </span>
             <button
               id='add'
               onClick={handleAddButton}
-              className='bg-black text-white sm:pb-1 align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
+              className='bg-black text-white sm:pb-1 px-2 py-2 mx-auto align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
             >
               +
             </button>
