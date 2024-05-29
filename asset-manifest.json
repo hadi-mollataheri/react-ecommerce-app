@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-ecommerce-app/static/css/main.8c7cb611.css",
-    "main.js": "/react-ecommerce-app/static/js/main.9364e8b4.js",
+    "main.js": "/react-ecommerce-app/static/js/main.9c2e94dd.js",
     "static/media/keyboard.jpg": "/react-ecommerce-app/static/media/keyboard.962a01b1a3da4e9dfeee.jpg",
     "static/media/t-shirt.jpg": "/react-ecommerce-app/static/media/t-shirt.bd57a64e7e36c0a71deb.jpg",
     "static/media/sweater.jpg": "/react-ecommerce-app/static/media/sweater.9c00ce4a09e1d0109274.jpg",
@@ -11,10 +11,10 @@
     "static/media/laptop.jpg": "/react-ecommerce-app/static/media/laptop.633e0c792a2d28234d05.jpg",
     "index.html": "/react-ecommerce-app/index.html",
     "main.8c7cb611.css.map": "/react-ecommerce-app/static/css/main.8c7cb611.css.map",
-    "main.9364e8b4.js.map": "/react-ecommerce-app/static/js/main.9364e8b4.js.map"
+    "main.9c2e94dd.js.map": "/react-ecommerce-app/static/js/main.9c2e94dd.js.map"
   },
   "entrypoints": [
     "static/css/main.8c7cb611.css",
-    "static/js/main.9364e8b4.js"
+    "static/js/main.9c2e94dd.js"
   ]
 }
