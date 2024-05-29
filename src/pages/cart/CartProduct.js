@@ -51,7 +51,7 @@ function CartProduct({ product }) {
             <button
               id='add'
               onClick={handleAddButton}
-              className='bg-black text-white sm:pb-1 pl-0.5 py-2 mx-auto align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
+              className='bg-black text-white sm:pb-1 py-2 mx-auto align-middle leading-none w-5 h-5 rounded-full flex justify-center items-center'
             >
               +
             </button>
